@@ -17,11 +17,25 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
+
+}
+
+.masonry {
+  /* This will create a masonry-like effect using CSS columns */
+  column-count: 4;
+  column-gap: 1em;
+}
+
+.item {
+  /* Prevents items from breaking across columns */
+  break-inside: avoid;
+  margin-bottom: 1em;
+}
+
+/* Optional media query to handle responsive layout */
+@media (max-width: 768px) {
+  .masonry {
+    column-count: 2;
+  }
 }
